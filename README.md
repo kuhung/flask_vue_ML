@@ -5,6 +5,12 @@
 ## Build Setup
 
 ``` bash
+# install python libraries
+pip install -r requirements.txt
+
+# run the server
+python app.py
+
 # install dependencies
 npm install
 
