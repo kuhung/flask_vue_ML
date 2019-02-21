@@ -1,0 +1,3 @@
+flair==0.4.0
+Flask==0.12.4
+Flask-Cors==3.0.4
