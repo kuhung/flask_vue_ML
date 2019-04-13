@@ -14,5 +14,4 @@ yarn-error.log*
 *.sln
 /node_modules
 /backup
-/build
 /models
