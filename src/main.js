@@ -8,16 +8,16 @@ require('../node_modules/bootstrap/dist/css/bootstrap.css')
 
 Vue.config.productionTip = false
 
+Vue.use(VueProgressBar, {
+  color: 'rgb(143, 255, 199)',
+  failedColor: 'red',
+  height: '10px'
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   components: { App },
   template: '<App/>'
-})
-
-Vue.use(VueProgressBar, {
-  color: 'rgb(143, 255, 199)',
-  failedColor: 'red',
-  height: '10px'
 })
