@@ -1,7 +1,3 @@
-# exposemodel
-
-> model operationalization
-
 ## Build Setup
 
 ``` bash
@@ -24,4 +20,4 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+![](https://github.com/kuhung/flask_vue_ML/blob/master/flask_vue_ml.jpg?raw=true)
