@@ -1,3 +1,6 @@
+![](https://github.com/kuhung/flask_vue_ML/blob/master/flask_vue_ml.jpg?raw=true)
+
+
 ## Build Setup
 
 ``` bash
@@ -19,5 +22,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-![](https://github.com/kuhung/flask_vue_ML/blob/master/flask_vue_ml.jpg?raw=true)
