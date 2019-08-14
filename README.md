@@ -22,3 +22,7 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+## Refer
+- https://github.com/smutuvi/flask_vue_ML
+- https://github.com/oleg-agapov/flask-vue-spa
