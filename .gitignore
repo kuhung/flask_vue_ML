@@ -16,3 +16,5 @@ yarn-error.log*
 /backup
 /models
 yarn.lock
+.e*
+.b*
