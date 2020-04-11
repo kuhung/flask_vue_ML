@@ -48,4 +48,5 @@ def input_predict_text():
     return jsonify(result)
 
 if __name__ == '__main__':
-    expose.run(debug=True)
+    # expose.run(debug=True)
+    expose.run(host='0.0.0.0')
