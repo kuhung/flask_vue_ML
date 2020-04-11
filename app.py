@@ -5,22 +5,24 @@ from flask_cors import CORS
 from flair.models import TextClassifier
 from flair.data import Sentence
 from flask import session
+import os
 
-app = Flask(__name__)
-app.secret_key = "super_secret_key"
-# app.config['MONGO_DBNAME'] = 'exposeModel'
-# app.config['MONGO_URI'] = 'mongodb://localhost:27017/exposeModel'
-# mongo = PyMongo(app)
+model_path = '/root/flask_vue_ML'
+expose = Flask(__name__)
+expose.secret_key = "super_secret_key"
+# expose.config['MONGO_DBNAME'] = 'exposeModel'
+# expose.config['MONGO_URI'] = 'mongodb://localhost:27017/exposeModel'
+# mongo = PyMongo(expose)
 
-CORS(app)
-classifier = TextClassifier.load_from_file('models/best-model.pt')
+CORS(expose)
+classifier = TextClassifier.load_from_file(os.path.join(model_path,'models/best-model.pt'))
 
-@app.route('/', methods=['GET'])
+@expose.route('/', methods=['GET'])
 def index():
     return jsonify("welcome to Arafa API")
 
 
-@app.route('/api/tasks', methods=['GET'])
+@expose.route('/api/tasks', methods=['GET'])
 def get_result():
     result = []
     try:
@@ -30,11 +32,11 @@ def get_result():
         result.append ({'title': 'The txt you input', 'tag': 'spam or harm' })
     return jsonify(result)
 
-@app.route('/api/task', methods=['POST'])
+@expose.route('/api/task', methods=['POST','GET'])
 def input_predict_text():
 
     title = request.get_json()['title']
-
+    # TODO: title type check
     sentence = Sentence(title)
     classifier.predict(sentence)
 
@@ -46,4 +48,4 @@ def input_predict_text():
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    expose.run(debug=True)

@@ -14,4 +14,10 @@ yarn-error.log*
 *.sln
 /node_modules
 /backup
-/models
+yarn.lock
+.e*
+.b*
+.p*
+*.ini
+/models/*
+/__pycache__
