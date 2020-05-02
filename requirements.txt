@@ -1,4 +1,3 @@
 flair==0.4.0
 flask>=1.0.0
 Flask-Cors==3.0.4
-bason
