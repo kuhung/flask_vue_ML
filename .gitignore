@@ -15,9 +15,7 @@ yarn-error.log*
 /node_modules
 /backup
 yarn.lock
-.e*
 .b*
-.p*
 *.ini
 /models/*
 /__pycache__
