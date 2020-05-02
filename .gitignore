@@ -19,3 +19,4 @@ yarn.lock
 *.ini
 /models/*
 /__pycache__
+app.pyc

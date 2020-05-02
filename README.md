@@ -18,11 +18,36 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
+## Deploy
+``` bash
+gunicorn -b 0.0.0.0:5000 app:expose -D
+```
+
+``` markdown
+nginx config
+
+server {
+	listen 80;
+
+	root /home/spam/dist;
+	index index.html index.htm index.nginx-debian.html;
+	server_name 149.129.54.11;
+
+	location / {
+		autoindex on;
+		root /home/spam/dist;
+		index  index.html index.htm;
+	}
+
+    location /api {
+        proxy_pass http://0.0.0.0:5000; 
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+'''
 ## Refer
 - https://github.com/smutuvi/flask_vue_ML
 - https://github.com/oleg-agapov/flask-vue-spa
